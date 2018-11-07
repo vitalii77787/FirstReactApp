@@ -1,12 +1,12 @@
 import React from 'react';
-import Article from './Article';
-import arcticles from '..//fixtures';
+import ArticleList from './ArticleList';
+import articles from '..//fixtures';
 
 function App() {
     return (
         <div>
             <h1>Hello world!</h1>
-            <Article arcticle={arcticles[0]}  vova="hello"/>
+            <ArticleList articles={articles}/>
         </div>
     )
 }

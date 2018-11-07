@@ -6,19 +6,19 @@ class Article extends Component {
         isOpen: true
     }
     render() {
-        const { arcticle } = this.props;
+        const { article } = this.props;
         console.log(this.props);
-        const body = this.state.isOpen && <section>{arcticle.text}</section>
+        const body = this.state.isOpen && <section>{article.text}</section>
         return (
             <div>
                 <h2>
-                    {arcticle.title}
+                    {article.title}
                     <button onClick={this.handlerClick}>
                         {this.state.isOpen ? "close":"open"}
                     </button>
                 </h2>
                 {body}
-                <h3>creation date: {(new Date(arcticle.date)).toDateString()}</h3>
+                <h3>creation date: {(new Date(article.date)).toDateString()}</h3>
             </div>
         )
     }
