@@ -3,9 +3,10 @@ import ArticleList from './ArticleList/index';
 import articles from '..//fixtures';
 import products from '..//products';
 import { Router, Route } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link,Switch} from 'react-router-dom';
 import history from './history';
 import ProductList from './ProductList';
+import ProductItem from './ProductItem';
 
 function App() {
     return (
@@ -36,12 +37,17 @@ function App() {
                         </button>
                         </div>
                     </nav>
+                   
                     <Route path="/List"
                         render={(props) => <ArticleList articles={articles} />}
                     />
                      <Route path="/Products"
                         render={(props) => <ProductList products={products} />}
                     />
+                    <Route path='/Products/:number'
+                     render={(props) => <ProductItem   {...props}/>}
+                     />
+                     
                 </div>
             </Router>
         </div>
